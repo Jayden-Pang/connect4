@@ -15,18 +15,21 @@ Game Rules:
 
 Available Features:
 1) Generation of random game sets or events
+- There are 3 difficulties available (Easy, Medium, Hard).
 - The computer moves will be random depending on the difficulty selected.
 - Higher difficulty will force the computer to place a mark nearer to the player's mark, given that the player is not one move away from winning.
 
 2) Data structure for storing game status
 - There will be a 2D array with 7 columns and 6 rows.
-- The elements in the array can store char data types.
+- The elements in the array can store char data types, and the char 'E' is stored initially.
 - Int data types will be used to store the number of turns.
+- Char data types will be used to store difficulty chosen.
 
 3) Dynamic memory management
 - Each move will change the corresponding element in the 2D array into either 'X' or 'O'.
-- Number of turns will be stored using an int data type and increases by 1 every turn.
-- Player turns will be stored using a boolean data type, 'TRUE' means player goes next and 'FALSE' means computer goes next, switches each turn.
+- Number of turns will be stored using an int data type, and increases by 1 every turn.
+- Player turns will be stored using a boolean data type, 'TRUE' means player goes next and 'FALSE' means computer goes next, updates every turn by using 'NOT' function.
+- When the game ends or player stops the game, All variables above will revert to their starting values.
 
 4) File input/output
 - When the player quits the game, the elements of the array will be printed row by row into a line of 42 characters, followed by
