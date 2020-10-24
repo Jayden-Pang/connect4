@@ -1,11 +1,11 @@
 # connect4
 
 **Group Members**
-Pang Po Hean (3035444243)
-Nicholas Tjandra Ariel (3035557973)
+- Pang Po Hean (3035444243)
+- Nicholas Tjandra Ariel (3035557973)
 
 **Game Name**
-Connect4
+- Connect4
 
 **Game Rules**
 1) The game starts with an empty 7 x 6 grid (7 columns and 6 rows).
