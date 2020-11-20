@@ -44,6 +44,7 @@
 - Makefile is used to generate the program from all the files.
 
 **Compilation and Execution**
+- Place all source files and the Makefile into a single folder. The commands are:
 1) Compilation: make connect4
 2) Execution: ./connect4
 3) Removal: make clean
