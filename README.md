@@ -9,33 +9,41 @@
 
 **Game Rules**
 1) The game starts with an empty 7 x 6 grid (7 columns and 6 rows).
-2) 2 players are required to play the game. One player is given the mark 'X' wheareas the other player is given mark 'O'.
-3) Each player takes turn to select a column (1-7).
+2) The player is given the mark 'O' wheareas the computer is given mark 'X'.
+3) Each side takes turn to select a column (1-7).
 4) Players then place their assigned mark on the bottom-most unoccupied row in that column and end the turn.
 5) The first player to get 4 marks in a row (vertical, horizontal or diagonal) wins the game.
 6) When all 42 spaces are filled, the game ends. If no player has 4 marks in a row, it is a draw.
 
 **Available Features**
 1) Generation of random game sets or events
-- There are 3 difficulties available (Easy, Medium, Hard).
+- There are 4 difficulties available (Easy, Medium, Hard, Challenging).
 - The computer moves will be random depending on the difficulty selected.
-- Higher difficulty will force the computer to place a mark nearer to the player's mark, given that the player is not one move away from winning.
+- For easy difficulty, computer's move is completely random.
+- For medium difficulty, computer's move is random but within one column away from the player's last move, it also chooses a winning move if available.
+- For hard difficulty, computer's move is based on minimax algorithm with depth = 3.
+- For challenging difficulty, computer's move is based on minimax algorithm with depth = 4.
 
 2) Data structure for storing game status
-- There will be a dynamic array to store user moves and computer moves.
-- Int data types will be used to store the number of turns.
-- Char data types will be used to store difficulty chosen.
+- Dynamic array is used to store user moves and computer moves in a sequence.
+- Int data types is used to store the number of turns, which also indicates the number of elements in the array.
+- Boolean data types is used to store whether the player starts first or not.
+- Int data types is used to store difficulty chosen.
 
 3) Dynamic memory management
 - Dynamic arrays are used to store user moves and computer moves.
-- Implement a function to increase the size of the array as the number of turns increases.
+- A function is implemented to increase the size of the array as the number of turns increases.
 
 4) File input/output
-- When the player quits the game, the elements of the array will be printed into a line of characters, followed by
-the difficulty chosen, who gets the next turn, and finally number of turns into a txt file.
-- When the player re-enters the game, the game status can be restored by reading the txt file.
+- When the player quits the game, the current game status will be printed into a line of integers separated by spaces and stored in savefile.txt.
+- When the player re-enters the game, the game status can be restored by reading the savefile.txt file.
 
 5) Program codes in multiple files
-- The whole program can be divided into multiple functions.
-- Functions include the main function, checking for winning condition, determining the computer moves, and drawing the interface.
-- Each function can be stored in a separate file.
+- The whole program is divided into multiple functions and stored in different files.
+- Programs include main program, checking for winning condition, determining the computer moves, drawing the interface, save and load files, control the game flow, and inputting moves into a new dynamic array.
+- Makefile is used to generate the program from all the files.
+
+**Compilation and Execution**
+1) Compilation: make connect4
+2) Execution: ./connect4
+3) Removal: make clean
