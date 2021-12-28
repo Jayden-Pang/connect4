@@ -1,9 +1,5 @@
 # connect4
 
-**Group Members**
-- Pang Po Hean (3035444243)
-- Nicholas Tjandra Ariel (3035557973)
-
 **Game Name**
 - Connect4
 
